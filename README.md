@@ -1,0 +1,2 @@
+# pseudocylindrical_convolution
+Pseudocylindrical convolutions for Learned Omnidirectional Image Compression
