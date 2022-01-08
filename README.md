@@ -1,9 +1,10 @@
 # pseudocylindrical_convolution
 Pseudocylindrical convolutions for Learned Omnidirectional Image Compression
 
-Requirment packages:
+Requirmed packages:
 - pytorch
-- cv2 (python-opencv) 
+- cv2 (python-opencv)
+- numpy 
  
 Install:
 * python setup.py install
