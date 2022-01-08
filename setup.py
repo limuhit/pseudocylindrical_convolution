@@ -4,14 +4,16 @@ import torch
 
 from setuptools import setup, find_packages
 from torch.utils.cpp_extension import BuildExtension, CUDAExtension
-			
+'''
+Uncomment the compute_80 for A100 and compute_86 for 3090
+'''		
 cxx_args = ['-std=c++14', '-DOK']
 nvcc_args = [
 	'-D__CUDA_NO_HALF_OPERATORS__',
-    '-gencode', 'arch=compute_61,code=sm_61',
+	'-gencode', 'arch=compute_61,code=sm_61',
 	'-gencode', 'arch=compute_75,code=sm_75',
-	'-gencode', 'arch=compute_80,code=sm_80',
-	'-gencode', 'arch=compute_86,code=sm_86'
+	#'-gencode', 'arch=compute_80,code=sm_80',
+	#'-gencode', 'arch=compute_86,code=sm_86'
 ]
 
 setup(
@@ -19,14 +21,14 @@ setup(
     packages=['PCONV_operator'],
     ext_modules=[
         CUDAExtension('PCONV', [
-            './extension/main.cpp',
-            './extension/math_cuda.cu',
-            './extension/projects_cuda.cu',
-            './extension/dtow_cuda.cu',
+			'./extension/main.cpp',
+			'./extension/math_cuda.cu',
+			'./extension/projects_cuda.cu',
+			'./extension/dtow_cuda.cu',
 			'./extension/context_reshape_cuda.cu',
 			'./extension/entropy_gmm_cuda.cu',
 			'./extension/mask_constrain_cuda.cu',
-            './extension/sphere_slice_cuda.cu',
+			'./extension/sphere_slice_cuda.cu',
 			'./extension/sphere_uslice_cuda.cu',
 			'./extension/entropy_gmm_table_cuda.cu',
 			'./extension/entropy_context_cuda.cu',
