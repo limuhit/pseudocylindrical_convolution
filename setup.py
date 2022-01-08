@@ -8,8 +8,10 @@ from torch.utils.cpp_extension import BuildExtension, CUDAExtension
 cxx_args = ['-std=c++14', '-DOK']
 nvcc_args = [
 	'-D__CUDA_NO_HALF_OPERATORS__',
-    '-gencode', 'arch=compute_60,code=sm_60',
-    '-gencode', 'arch=compute_61,code=sm_61'
+    '-gencode', 'arch=compute_61,code=sm_61',
+	'-gencode', 'arch=compute_75,code=sm_75',
+	'-gencode', 'arch=compute_80,code=sm_80',
+	'-gencode', 'arch=compute_86,code=sm_86'
 ]
 
 setup(
