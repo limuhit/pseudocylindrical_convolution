@@ -1,0 +1,692 @@
+running install
+running bdist_egg
+running egg_info
+writing coder.egg-info\PKG-INFO
+writing dependency_links to coder.egg-info\dependency_links.txt
+writing top-level names to coder.egg-info\top_level.txt
+reading manifest file 'coder.egg-info\SOURCES.txt'
+writing manifest file 'coder.egg-info\SOURCES.txt'
+installing library code to build\bdist.win-amd64\egg
+running install_lib
+running build_ext
+building 'coder' extension
+Emitting ninja build file e:\VSProjects\CCN\coder\build\temp.win-amd64-3.7\Release\build.ninja...
+Compiling objects...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+[1/1] cl /showIncludes /nologo /Ox /W3 /GL /DNDEBUG /MD /MD /wd4819 /wd4251 /wd4244 /wd4267 /wd4275 /wd4018 /wd4190 /EHsc -IE:\software\Anaconda3\lib\site-packages\torch\include -IE:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include -IE:\software\Anaconda3\lib\site-packages\torch\include\TH -IE:\software\Anaconda3\lib\site-packages\torch\include\THC -IE:\software\Anaconda3\include -IE:\software\Anaconda3\include "-ID:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\ATLMFC\include" "-ID:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include" "-IC:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt" "-IC:\Program Files (x86)\Windows Kits\8.1\include\\shared" "-IC:\Program Files (x86)\Windows Kits\8.1\include\\um" "-IC:\Program Files (x86)\Windows Kits\8.1\include\\winrt" "-IC:\Program Files (x86)\Windows Kits\8.1\include\\cppwinrt" -c e:\VSProjects\CCN\coder\python.cpp /Foe:\VSProjects\CCN\coder\build\temp.win-amd64-3.7\Release\python.obj -std=c++11 /wd4251 /W0 /O1 -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=coder -D_GLIBCXX_USE_CXX11_ABI=0 /std:c++14
+cl: 命令行 warning D9025 :正在重写“/W3”(用“/W0”)
+cl: 命令行 warning D9025 :正在重写“/Ox”(用“/O1”)
+cl: 命令行 warning D9002 :忽略未知选项“-std=c++11”
+注意: 包含文件:  E:\software\Anaconda3\lib\site-packages\torch\include\torch/extension.h
+注意: 包含文件:   E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/all.h
+注意: 包含文件:    E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/cuda.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/WindowsTorchApiMacro.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\c10/macros/Export.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\c10/macros/cmake_macros.h
+注意: 包含文件:     D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\cstdint
+注意: 包含文件:      D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\yvals.h
+注意: 包含文件:       D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\yvals_core.h
+注意: 包含文件:        D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\vcruntime.h
+注意: 包含文件:         D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\sal.h
+注意: 包含文件:          D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\concurrencysal.h
+注意: 包含文件:         D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\vadefs.h
+注意: 包含文件:        D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xkeycheck.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\crtdbg.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\corecrt.h
+注意: 包含文件:        D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\vcruntime_new_debug.h
+注意: 包含文件:         D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\vcruntime_new.h
+注意: 包含文件:       D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\crtdefs.h
+注意: 包含文件:       D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\use_ansi.h
+注意: 包含文件:      D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\stdint.h
+注意: 包含文件:     D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\cstddef
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\stddef.h
+注意: 包含文件:      D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xtr1common
+注意: 包含文件:    E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/dataloader.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/dataloader/stateful.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/dataloader/base.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/dataloader_options.h
+注意: 包含文件:         E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/arg.h
+注意: 包含文件:          D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\utility
+注意: 包含文件:           D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\type_traits
+注意: 包含文件:            D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xstddef
+注意: 包含文件:             D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\cstdlib
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\math.h
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\stdlib.h
+注意: 包含文件:               C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\corecrt_malloc.h
+注意: 包含文件:               C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\corecrt_search.h
+注意: 包含文件:               C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\corecrt_wstdlib.h
+注意: 包含文件:               D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\limits.h
+注意: 包含文件:             D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\initializer_list
+注意: 包含文件:         E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/types.h
+注意: 包含文件:          E:\software\Anaconda3\lib\site-packages\torch\include\ATen/ATen.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/Allocator.h
+注意: 包含文件:            D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\memory
+注意: 包含文件:             D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\exception
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\malloc.h
+注意: 包含文件:              D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\vcruntime_exception.h
+注意: 包含文件:               D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\eh.h
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\corecrt_terminate.h
+注意: 包含文件:             D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\iosfwd
+注意: 包含文件:              D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\cstdio
+注意: 包含文件:               C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\stdio.h
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\corecrt_wstdio.h
+注意: 包含文件:                 C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\corecrt_stdio_config.h
+注意: 包含文件:              D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\cstring
+注意: 包含文件:               C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\string.h
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\corecrt_memory.h
+注意: 包含文件:                 C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\corecrt_memcpy_s.h
+注意: 包含文件:                  C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\errno.h
+注意: 包含文件:                  D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\vcruntime_string.h
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\corecrt_wstring.h
+注意: 包含文件:              D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\cwchar
+注意: 包含文件:               C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\wchar.h
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\corecrt_wconio.h
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\corecrt_wctype.h
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\corecrt_wdirect.h
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\corecrt_wio.h
+注意: 包含文件:                 C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\corecrt_share.h
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\corecrt_wprocess.h
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\corecrt_wtime.h
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\sys/stat.h
+注意: 包含文件:                 C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\sys/types.h
+注意: 包含文件:             D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\typeinfo
+注意: 包含文件:              D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\vcruntime_typeinfo.h
+注意: 包含文件:             D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xmemory
+注意: 包含文件:              D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\limits
+注意: 包含文件:               D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\cfloat
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\float.h
+注意: 包含文件:               D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\climits
+注意: 包含文件:              D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\new
+注意: 包含文件:              D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xatomic.h
+注意: 包含文件:               D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\intrin0.h
+注意: 包含文件:              D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xutility
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/Device.h
+注意: 包含文件:             E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/DeviceType.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\c10/macros/Macros.h
+注意: 包含文件:               D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\sstream
+注意: 包含文件:                D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\istream
+注意: 包含文件:                 D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ostream
+注意: 包含文件:                  D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ios
+注意: 包含文件:                   D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xlocnum
+注意: 包含文件:                    D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\cmath
+注意: 包含文件:                    D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\streambuf
+注意: 包含文件:                     D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xiosbase
+注意: 包含文件:                      C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\share.h
+注意: 包含文件:                      D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\system_error
+注意: 包含文件:                       D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\cerrno
+注意: 包含文件:                       D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\stdexcept
+注意: 包含文件:                        D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xstring
+注意: 包含文件:                       D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xcall_once.h
+注意: 包含文件:                       D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xerrc.h
+注意: 包含文件:                      D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xlocale
+注意: 包含文件:                       D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xfacet
+注意: 包含文件:                       D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xlocinfo
+注意: 包含文件:                        D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xlocinfo.h
+注意: 包含文件:                         C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\ctype.h
+注意: 包含文件:                         C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\locale.h
+注意: 包含文件:                D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\string
+注意: 包含文件:                 D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\cctype
+注意: 包含文件:              D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\functional
+注意: 包含文件:               D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\tuple
+注意: 包含文件:             E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/Exception.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/StringUtil.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/string_utils.h
+注意: 包含文件:               D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\vector
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/Deprecated.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/ThreadLocalDebugInfo.h
+注意: 包含文件:             D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\unordered_map
+注意: 包含文件:              D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xhash
+注意: 包含文件:               D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\list
+注意: 包含文件:               D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xbit_ops.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/UniqueVoidPtr.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/ATenGeneral.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\ATen/Context.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\ATen/Tensor.h
+注意: 包含文件:             E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/TensorBody.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/Layout.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/Backend.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/DispatchKey.h
+注意: 包含文件:                 D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\iostream
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/ArrayRef.h
+注意: 包含文件:                  E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/SmallVector.h
+注意: 包含文件:                   E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/AlignOf.h
+注意: 包含文件:                   D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\algorithm
+注意: 包含文件:                   D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\cassert
+注意: 包含文件:                    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\assert.h
+注意: 包含文件:                   D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\iterator
+注意: 包含文件:                  E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/C++17.h
+注意: 包含文件:                  D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\array
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/DispatchKeySet.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/llvmMathExtras.h
+注意: 包含文件:                  D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\cassert
+注意: 包含文件:                   C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\assert.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/MemoryFormat.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/QScheme.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/Stream.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/Scalar.h
+注意: 包含文件:               C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\assert.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/ScalarType.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/complex.h
+注意: 包含文件:                 D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\complex
+注意: 包含文件:                  D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ymath.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/complex_math.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/complex_utils.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/Half.h
+注意: 包含文件:                 C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\math.h
+注意: 包含文件:                 D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\intrin.h
+注意: 包含文件:                  D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\setjmp.h
+注意: 包含文件:                  D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\immintrin.h
+注意: 包含文件:                   D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\wmmintrin.h
+注意: 包含文件:                    D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\nmmintrin.h
+注意: 包含文件:                     D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\smmintrin.h
+注意: 包含文件:                      D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\tmmintrin.h
+注意: 包含文件:                       D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\pmmintrin.h
+注意: 包含文件:                        D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\emmintrin.h
+注意: 包含文件:                         D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xmmintrin.h
+注意: 包含文件:                          D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\mmintrin.h
+注意: 包含文件:                   D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\zmmintrin.h
+注意: 包含文件:                  D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ammintrin.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/Half-inl.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/qint32.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/qint8.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/quint8.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/BFloat16.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/BFloat16-inl.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/quint4x2.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/Optional.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/in_place.h
+注意: 包含文件:                 D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\cassert
+注意: 包含文件:                  C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\assert.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/Metaprogramming.h
+注意: 包含文件:                  E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/TypeList.h
+注意: 包含文件:                   E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/TypeTraits.h
+注意: 包含文件:                  E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/Array.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/TypeCast.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/ScalarTypeToTypeMeta.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/typeid.h
+注意: 包含文件:                D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\atomic
+注意: 包含文件:                D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\cassert
+注意: 包含文件:                 C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\assert.h
+注意: 包含文件:                D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\mutex
+注意: 包含文件:                 D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\chrono
+注意: 包含文件:                  D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ratio
+注意: 包含文件:                  C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\time.h
+注意: 包含文件:                  D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xtimec.h
+注意: 包含文件:                 D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\thread
+注意: 包含文件:                  C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\process.h
+注意: 包含文件:                   C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\corecrt_startup.h
+注意: 包含文件:                    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\math.h
+注意: 包含文件:                    D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\vcruntime_startup.h
+注意: 包含文件:                  D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xthreads.h
+注意: 包含文件:                D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\unordered_set
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/Backtrace.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/IdWrapper.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/Type.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/TypeIndex.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/ConstexprCrc.h
+注意: 包含文件:                  E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/string_view.h
+注意: 包含文件:                   E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/reverse_iterator.h
+注意: 包含文件:                 D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\cinttypes
+注意: 包含文件:                  C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/flat_hash_map.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/Storage.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/StorageImpl.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/intrusive_ptr.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/TensorAccessor.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/TensorImpl.h
+注意: 包含文件:               D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\numeric
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/TensorOptions.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/DefaultDtype.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/impl/LocalDispatchKeySet.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/Flags.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/Registry.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/impl/SizesAndStrides.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/CopyBytes.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/Logging.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/logging_is_not_google_glog.h
+注意: 包含文件:                 D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime
+注意: 包含文件:                 D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\fstream
+注意: 包含文件:                 D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\iomanip
+注意: 包含文件:                  D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xlocmon
+注意: 包含文件:                  D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xloctime
+注意: 包含文件:                 D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\map
+注意: 包含文件:                  D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xtree
+注意: 包含文件:                 D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\set
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/python_stub.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/UndefinedTensorImpl.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/WrapDimMinimal.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/DeprecatedTypePropertiesRegistry.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/DeprecatedTypeProperties.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/Generator.h
+注意: 包含文件:                D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\deque
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/GeneratorImpl.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/NamedTensor.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/Dimname.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/interned_strings.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/aten_interned_strings.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/QuantizerBase.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\ATen/Utils.h
+注意: 包含文件:             E:\software\Anaconda3\lib\site-packages\torch\include\ATen/Formatting.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/Formatting.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/Tensor.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\ATen/CPUGeneratorImpl.h
+注意: 包含文件:             E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/MT19937RNGEngine.h
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\math.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/LegacyTypeDispatch.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\ATen/detail/CUDAHooksInterface.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\ATen/detail/HIPHooksInterface.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/impl/DeviceGuardImplInterface.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/QEngine.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\ATen/Device.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\ATen/DeviceGuard.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/DeviceGuard.h
+注意: 包含文件:             E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/impl/InlineDeviceGuard.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/impl/VirtualGuardImpl.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\ATen/DimVector.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/DimVector.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\ATen/Dispatch.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\ATen/record_function.h
+注意: 包含文件:             E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/ivalue.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/blob.h
+注意: 包含文件:              D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\typeindex
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/ivalue_inl.h
+注意: 包含文件:               D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\condition_variable
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/Dict.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/order_preserving_flat_hash_map.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/Dict_inl.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/hash.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/List.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/List_inl.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/jit_type_base.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/jit_type.h
+注意: 包含文件:                  E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/functional.h
+注意: 包含文件:                  E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/qualified_name.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/rref_interface.h
+注意: 包含文件:             E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/operator_name.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\ATen/Formatting.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\ATen/Functions.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/Reduction.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\ATen/TensorUtils.h
+注意: 包含文件:             E:\software\Anaconda3\lib\site-packages\torch\include\ATen/TensorGeometry.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\ATen/WrapDimUtils.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\ATen/TracerMode.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/op_registration/hacky_wrapper_for_legacy_signatures.h
+注意: 包含文件:             E:\software\Anaconda3\lib\site-packages\torch\include\c10/core/CompileTimeFunctionPointer.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\ATen/NamedTensor.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\ATen/ScalarOps.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\ATen/TensorIndexing.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\ATen/ExpandUtils.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\ATen/NativeFunctions.h
+注意: 包含文件:             E:\software\Anaconda3\lib\site-packages\torch\include\ATen/MetaFunctions.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\ATen/TensorMeta.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\ATen/TensorIterator.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/FunctionRef.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/Range.h
+注意: 包含文件:               D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\bitset
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\ATen/NamedTensorUtils.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\ATen/NamedTensor.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\ATen/TensorNames.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\ATen/TensorOperators.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\ATen/Version.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/Scalar.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/UnsafeFromTH.h
+注意: 包含文件:          E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/autograd/generated/variable_factories.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/grad_mode.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/api/include/torch/detail/TensorDataContainer.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/autograd/variable.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/utils/python_stub.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/autograd/edge.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/autograd/function_hook.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/autograd/cpp_hook.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/autograd/forward_grad.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/frontend/tracer.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/stack.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/api/object.h
+注意: 包含文件:             E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/api/method.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/function.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/function_schema.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/alias_info.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/dispatch/OperatorOptions.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/function_schema_inl.h
+注意: 包含文件:              E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/api/function_impl.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/ir/ir.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/ir/attributes.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/ir/graph_node_list.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/ir/named_value.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/frontend/source_range.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/ir/constants.h
+注意: 包含文件:                  E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/ir/scope.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/utils/variadic.h
+注意: 包含文件:                  E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/Variadic.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/runtime/operator.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/dispatch/Dispatcher.h
+注意: 包含文件:                  E:\software\Anaconda3\lib\site-packages\torch\include\ATen/SequenceNumber.h
+注意: 包含文件:                  E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/boxing/KernelFunction.h
+注意: 包含文件:                   E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/boxing/KernelFunction_impl.h
+注意: 包含文件:                    E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/boxing/impl/boxing.h
+注意: 包含文件:                    E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/boxing/impl/make_boxed_from_unboxed_functor.h
+注意: 包含文件:                    E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/boxing/impl/WrapFunctionIntoFunctor.h
+注意: 包含文件:                    E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/boxing/impl/WrapFunctionIntoRuntimeFunctor.h
+注意: 包含文件:                  E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/dispatch/OperatorEntry.h
+注意: 包含文件:                   E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/either.h
+注意: 包含文件:                   E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/dispatch/DispatchKeyExtractor.h
+注意: 包含文件:                    E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/Bitset.h
+注意: 包含文件:                   E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/dispatch/CppSignature.h
+注意: 包含文件:                   E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/dispatch/RegistrationHandleRAII.h
+注意: 包含文件:                  E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/LeftRight.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/op_registration/op_whitelist.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/frontend/function_schema_parser.h
+注意: 包含文件:                  E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/Macros.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/runtime/operator_options.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\torch/library.h
+注意: 包含文件:                  E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/op_registration/infer_schema.h
+注意: 包含文件:                  E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/op_registration/op_registration.h
+注意: 包含文件:                   E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/ATenOpList.h
+注意: 包含文件:                  E:\software\Anaconda3\lib\site-packages\torch\include\torch/custom_class.h
+注意: 包含文件:                   E:\software\Anaconda3\lib\site-packages\torch\include\ATen/core/builtin_function.h
+注意: 包含文件:                   E:\software\Anaconda3\lib\site-packages\torch\include\torch/custom_class_detail.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/utils/disallow_copy.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/runtime/graph_executor.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/python/update_graph_executor_opt.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/runtime/argument_spec.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/runtime/interpreter.h
+注意: 包含文件:                 E:\software\Anaconda3\lib\site-packages\torch\include\ATen/ThreadLocalState.h
+注意: 包含文件:                E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/runtime/variable_tensor_list.h
+注意: 包含文件:               E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/utils/memory.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/detail/data_shuttle.h
+注意: 包含文件:         E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/detail/queue.h
+注意: 包含文件:          D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\queue
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/detail/sequencers.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/iterator.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/samplers/random.h
+注意: 包含文件:         E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/samplers/base.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/worker_exception.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/dataloader/stateless.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/datasets.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/datasets/base.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/example.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/datasets/chunk.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/datasets/stateful.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/samplers.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/samplers/custom_batch_request.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/samplers/distributed.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/samplers/sequential.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/samplers/serialize.h
+注意: 包含文件:         E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/serialize/archive.h
+注意: 包含文件:          E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/serialize/input-archive.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/api/module.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/passes/shape_analysis.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/api/include/torch/ordered_dict.h
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/api/compilation_unit.h
+注意: 包含文件:             E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/frontend/name_mangler.h
+注意: 包含文件:          E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/serialize/output-archive.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/samplers/stream.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/serialize.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/serialize/tensor.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/datasets/map.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/datasets/mnist.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/datasets/shared.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/datasets/tensor.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/transforms.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/transforms/base.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/transforms/collate.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/transforms/lambda.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/transforms/stack.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/data/transforms/tensor.h
+注意: 包含文件:    E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/enum.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\c10/util/variant.h
+注意: 包含文件:    E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/fft.h
+注意: 包含文件:    E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/jit.h
+注意: 包含文件:    E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/linalg.h
+注意: 包含文件:    E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/cloneable.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/module.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/container/any_module_holder.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/container/any_value.h
+注意: 包含文件:         E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/detail/static.h
+注意: 包含文件:         E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/pimpl.h
+注意: 包含文件:          E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/api/include/torch/nn/pimpl-inl.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/utils.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\ATen/Parallel.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\ATen/Config.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\ATen/ParallelOpenMP.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/autograd/grad_mode.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/functional.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/functional/batchnorm.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/batchnorm.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/functional/conv.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/conv.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/expanding_array.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/functional/distance.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/distance.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/functional/dropout.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/dropout.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/functional/embedding.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/embedding.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/functional/fold.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/fold.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/functional/linear.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/functional/loss.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/functional/activation.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/activation.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/linear.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/loss.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/functional/normalization.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/normalization.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/functional/padding.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/padding.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/functional/pooling.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/pooling.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/utils.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/functional/pixelshuffle.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/pixelshuffle.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/functional/upsampling.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/upsampling.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/functional/vision.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/vision.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/functional/instancenorm.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/instancenorm.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/init.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/common.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/container/any.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/container/functional.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/container/moduledict.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/container/modulelist.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/container/named_any.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/container/sequential.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/container/parameterdict.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/container/parameterlist.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/adaptive.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/linear.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/adaptive.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/batchnorm.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/instancenorm.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/conv.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/dropout.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/distance.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/embedding.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/fold.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/loss.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/padding.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/pooling.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/rnn.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/rnn.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/utils/rnn.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/pixelshuffle.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/upsampling.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/activation.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/normalization.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/_functions.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/autograd/custom_function.h
+注意: 包含文件:         E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/autograd/function.h
+注意: 包含文件:          E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/autograd/anomaly_mode.h
+注意: 包含文件:          E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/autograd/profiler.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/autograd/profiler_legacy.h
+注意: 包含文件:            D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\forward_list
+注意: 包含文件:            E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/autograd/profiler_utils.h
+注意: 包含文件:           E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/autograd/profiler_kineto.h
+注意: 包含文件:          E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/autograd/saved_variable.h
+注意: 包含文件:          E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/autograd/input_metadata.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/transformerlayer.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/transformerlayer.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/transformercoder.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/transformercoder.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/modules/transformer.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options/transformer.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/options.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/utils.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/utils/clip_grad.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/nn/utils/convert_parameters.h
+注意: 包含文件:    E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/optim.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/optim/adagrad.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/optim/optimizer.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/optim/serialize.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/optim/adam.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/optim/adamw.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/optim/lbfgs.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/optim/rmsprop.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/optim/sgd.h
+注意: 包含文件:    E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/autograd.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/autograd/autograd.h
+注意: 包含文件:    E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/version.h
+注意: 包含文件:   E:\software\Anaconda3\lib\site-packages\torch\include\torch\csrc\api\include\torch/python.h
+注意: 包含文件:    E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/Device.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/python_headers.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\math.h
+注意: 包含文件:      E:\software\Anaconda3\include\Python.h
+注意: 包含文件:       E:\software\Anaconda3\include\patchlevel.h
+注意: 包含文件:       E:\software\Anaconda3\include\pyconfig.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\io.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\corecrt_io.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\8.1\include\\shared\basetsd.h
+注意: 包含文件:       E:\software\Anaconda3\include\pymacconfig.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\assert.h
+注意: 包含文件:       E:\software\Anaconda3\include\pyport.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\math.h
+注意: 包含文件:       E:\software\Anaconda3\include\pymacro.h
+注意: 包含文件:       E:\software\Anaconda3\include\pyatomic.h
+注意: 包含文件:       E:\software\Anaconda3\include\pymath.h
+注意: 包含文件:       E:\software\Anaconda3\include\pytime.h
+注意: 包含文件:        E:\software\Anaconda3\include\object.h
+注意: 包含文件:       E:\software\Anaconda3\include\pymem.h
+注意: 包含文件:       E:\software\Anaconda3\include\objimpl.h
+注意: 包含文件:       E:\software\Anaconda3\include\typeslots.h
+注意: 包含文件:       E:\software\Anaconda3\include\pyhash.h
+注意: 包含文件:       E:\software\Anaconda3\include\pydebug.h
+注意: 包含文件:       E:\software\Anaconda3\include\bytearrayobject.h
+注意: 包含文件:        D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\stdarg.h
+注意: 包含文件:       E:\software\Anaconda3\include\bytesobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\unicodeobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\longobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\longintrepr.h
+注意: 包含文件:       E:\software\Anaconda3\include\boolobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\floatobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\complexobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\rangeobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\memoryobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\tupleobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\listobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\dictobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\odictobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\enumobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\setobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\methodobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\moduleobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\funcobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\classobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\fileobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\pycapsule.h
+注意: 包含文件:       E:\software\Anaconda3\include\traceback.h
+注意: 包含文件:        E:\software\Anaconda3\include\pystate.h
+注意: 包含文件:         E:\software\Anaconda3\include\pythread.h
+注意: 包含文件:       E:\software\Anaconda3\include\sliceobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\cellobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\iterobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\genobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\descrobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\warnings.h
+注意: 包含文件:       E:\software\Anaconda3\include\weakrefobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\structseq.h
+注意: 包含文件:       E:\software\Anaconda3\include\namespaceobject.h
+注意: 包含文件:       E:\software\Anaconda3\include\codecs.h
+注意: 包含文件:       E:\software\Anaconda3\include\pyerrors.h
+注意: 包含文件:       E:\software\Anaconda3\include\context.h
+注意: 包含文件:       E:\software\Anaconda3\include\pyarena.h
+注意: 包含文件:       E:\software\Anaconda3\include\modsupport.h
+注意: 包含文件:       E:\software\Anaconda3\include\compile.h
+注意: 包含文件:        E:\software\Anaconda3\include\code.h
+注意: 包含文件:       E:\software\Anaconda3\include\pythonrun.h
+注意: 包含文件:       E:\software\Anaconda3\include\pylifecycle.h
+注意: 包含文件:       E:\software\Anaconda3\include\ceval.h
+注意: 包含文件:       E:\software\Anaconda3\include\sysmodule.h
+注意: 包含文件:       E:\software\Anaconda3\include\osmodule.h
+注意: 包含文件:       E:\software\Anaconda3\include\intrcheck.h
+注意: 包含文件:       E:\software\Anaconda3\include\import.h
+注意: 包含文件:       E:\software\Anaconda3\include\abstract.h
+注意: 包含文件:       E:\software\Anaconda3\include\bltinmodule.h
+注意: 包含文件:       E:\software\Anaconda3\include\eval.h
+注意: 包含文件:       E:\software\Anaconda3\include\pyctype.h
+注意: 包含文件:       E:\software\Anaconda3\include\pystrtod.h
+注意: 包含文件:       E:\software\Anaconda3\include\pystrcmp.h
+注意: 包含文件:       E:\software\Anaconda3\include\dtoa.h
+注意: 包含文件:       E:\software\Anaconda3\include\fileutils.h
+注意: 包含文件:       E:\software\Anaconda3\include\pyfpe.h
+注意: 包含文件:    E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/Dtype.h
+注意: 包含文件:    E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/DynamicTypes.h
+注意: 包含文件:    E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/utils/pybind.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\pybind11/pybind11.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\pybind11\attr.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\pybind11\cast.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\pybind11\pytypes.h
+注意: 包含文件:         E:\software\Anaconda3\lib\site-packages\torch\include\pybind11\detail/common.h
+注意: 包含文件:          E:\software\Anaconda3\include\frameobject.h
+注意: 包含文件:         E:\software\Anaconda3\lib\site-packages\torch\include\pybind11\buffer_info.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\pybind11\detail/typeid.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\pybind11\detail/descr.h
+注意: 包含文件:        E:\software\Anaconda3\lib\site-packages\torch\include\pybind11\detail/internals.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\pybind11\options.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\pybind11\detail/class.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\pybind11\detail/init.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\pybind11/stl.h
+注意: 包含文件:      D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\valarray
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/autograd/python_variable.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/THP_export.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/utils/python_tuples.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/Exceptions.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/utils/auto_gil.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/jit/runtime/jit_exception.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\ATen/detail/FunctionTraits.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/utils/object_ptr.h
+注意: 包含文件:      E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/utils/python_numbers.h
+注意: 包含文件:       E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/utils/tensor_numpy.h
+注意: 包含文件:     E:\software\Anaconda3\lib\site-packages\torch\include\torch/csrc/Generator.h
+注意: 包含文件:  e:\VSProjects\CCN\coder\coder.h
+注意: 包含文件:   e:\VSProjects\CCN\coder\ArithmeticCoder.h
+注意: 包含文件:    e:\VSProjects\CCN\coder\BitIoStream.h
+D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX86\x64\link.exe /nologo /INCREMENTAL:NO /LTCG /DLL /MANIFEST:EMBED,ID=2 /MANIFESTUAC:NO /LIBPATH:E:\software\Anaconda3\lib\site-packages\torch\lib /LIBPATH:E:\software\Anaconda3\libs /LIBPATH:E:\software\Anaconda3\PCbuild\amd64 "/LIBPATH:D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\ATLMFC\lib\x64" "/LIBPATH:D:\Program Files\vs2017\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\lib\x64" "/LIBPATH:C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\lib\um\x64" "/LIBPATH:C:\Program Files (x86)\Windows Kits\10\lib\10.0.10240.0\ucrt\x64" "/LIBPATH:C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x64" c10.lib torch.lib torch_cpu.lib torch_python.lib /EXPORT:PyInit_coder e:\VSProjects\CCN\coder\build\temp.win-amd64-3.7\Release\python.obj e:\VSProjects\CCN\coder\build\temp.win-amd64-3.7\Release\BitIoStream.obj e:\VSProjects\CCN\coder\build\temp.win-amd64-3.7\Release\ArithmeticCoder.obj /OUT:build\lib.win-amd64-3.7\coder.cp37-win_amd64.pyd /IMPLIB:e:\VSProjects\CCN\coder\build\temp.win-amd64-3.7\Release\coder.cp37-win_amd64.lib
+  正在创建库 e:\VSProjects\CCN\coder\build\temp.win-amd64-3.7\Release\coder.cp37-win_amd64.lib 和对象 e:\VSProjects\CCN\coder\build\temp.win-amd64-3.7\Release\coder.cp37-win_amd64.exp
+正在生成代码
+已完成代码的生成
+creating build\bdist.win-amd64\egg
+copying build\lib.win-amd64-3.7\coder.cp37-win_amd64.pyd -> build\bdist.win-amd64\egg
+creating stub loader for coder.cp37-win_amd64.pyd
+byte-compiling build\bdist.win-amd64\egg\coder.py to coder.cpython-37.pyc
+creating build\bdist.win-amd64\egg\EGG-INFO
+copying coder.egg-info\PKG-INFO -> build\bdist.win-amd64\egg\EGG-INFO
+copying coder.egg-info\SOURCES.txt -> build\bdist.win-amd64\egg\EGG-INFO
+copying coder.egg-info\dependency_links.txt -> build\bdist.win-amd64\egg\EGG-INFO
+copying coder.egg-info\top_level.txt -> build\bdist.win-amd64\egg\EGG-INFO
+writing build\bdist.win-amd64\egg\EGG-INFO\native_libs.txt
+creating 'dist\coder-0.0.0-py3.7-win-amd64.egg' and adding 'build\bdist.win-amd64\egg' to it
+removing 'build\bdist.win-amd64\egg' (and everything under it)
+Processing coder-0.0.0-py3.7-win-amd64.egg
+removing 'e:\software\anaconda3\lib\site-packages\coder-0.0.0-py3.7-win-amd64.egg' (and everything under it)
+creating e:\software\anaconda3\lib\site-packages\coder-0.0.0-py3.7-win-amd64.egg
+Extracting coder-0.0.0-py3.7-win-amd64.egg to e:\software\anaconda3\lib\site-packages
+coder 0.0.0 is already the active version in easy-install.pth
+
+Installed e:\software\anaconda3\lib\site-packages\coder-0.0.0-py3.7-win-amd64.egg
+Processing dependencies for coder==0.0.0
+Finished processing dependencies for coder==0.0.0
