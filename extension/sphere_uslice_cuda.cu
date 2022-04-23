@@ -32,10 +32,10 @@ __global__ void init_uslice_param_kernel(const int nthreads, const int npart, co
 void sphere_uslice_opt::reshape(int num, int channel, int height, int width){
     bool hflag = (height_==height-pad_*2);
     if (!reshape_base(num, channel, height-pad_*2, width-pad_*2)) return; 
-    if(hflag) return;
     w_out_ = width_;
     n_out_ = num_ / npart_;
     h_out_ = height_ * npart_;
+	if(hflag) return;
     hindex_ = at::zeros({npart_}, at::kInt);
     stride_inv_ = at::zeros({npart_}, at::kInt);
     rt_ = 20;

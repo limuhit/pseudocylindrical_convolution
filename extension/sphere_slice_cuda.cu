@@ -54,14 +54,14 @@ __global__ void init_inv_param_kernel(const int nthreads, const int npart, const
 
 void sphere_slice_opt::reshape(int num, int channel, int height, int width){
     bool hflag = (height_==height);
-    if (!reshape_base(num, channel, height, width)) return; 
+    if (!reshape_base(num, channel, height, width)) return;
+	w_out_ = width_;
+    n_out_ = num_ * npart_;	
     if(hflag) return;
     hindex_ = at::zeros({2, npart_}, at::kInt);
     hinv_ = at::zeros({2, height_}, at::kInt);
     h_out_ = sphere_cal_npart_hw_v2(height_, width_, npart_, weight_, hindex_.data_ptr<int>(), hinv_.data_ptr<int>());
     rt_ = 4;
-    w_out_ = width_;
-    n_out_ = num_ * npart_;
     hindex_ = hindex_.to(torch::TensorOptions().device(torch::kCUDA, device_));
     hinv_ = hinv_.to(torch::TensorOptions().device(torch::kCUDA, device_));
     inv_param_ = at::zeros({npart_,width_,rt_*10}, torch::TensorOptions().dtype(torch::kInt32).device(torch::kCUDA, device_));
