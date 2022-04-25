@@ -2,7 +2,8 @@ import torch
 from torch import nn
 from PCONV_operator import  Dtow, SphereSlice, SphereUslice, EntropyGmm, ContextReshape, DropGrad, MaskConv2
 from PCONV_operator import PseudoContextV2,  PseudoPadV2, PseudoFillV2, PseudoQUANTV2, PseudoGDNV2, PseudoEntropyContext, PseudoEntropyPad
-from PCONV_operator import StubMask, Extract, ChannelGroupConv, ChannelGroupReshape
+from PCONV_operator import StubMask, Extract
+from itertools import chain
 
 class ClipData_AF(torch.autograd.Function):
 
@@ -156,12 +157,12 @@ class ResidualBlockUp(nn.Module):
         self.pad1 = PseudoPadV2(1,npart,ctx,device=device_id)
         self.conv1 = nn.Conv2d(channels, channels*4, 3, 1)
         self.relu1 = nn.PReLU(channels*4)
-        self.dtow1 = Dtow(2, True, version=0, device=device_id)
+        self.dtow1 = Dtow(2, True, device_id)
         self.pad2 = PseudoPadV2(1,npart,ctx,device=device_id)
         self.conv2 = nn.Conv2d(channels, channels, 3, 1)
         self.relu2 = PseudoGDNV2(channels, npart, ctx, device_id, inverse = True)
         self.short_cut = nn.Conv2d(channels, channels*4, 1, 1)
-        self.dtow2 = Dtow(2, True, version=0, device=device_id)
+        self.dtow2 = Dtow(2, True, device_id)
         self.trim = PseudoFillV2(0,npart,ctx,device=device_id)
 
     def forward(self, x):
@@ -202,7 +203,7 @@ class DecoderV2(nn.Module):
             ResidualBlockV2(channels,npart,ctx,device_id),
             PseudoPadV2(1,npart,ctx,device=device_id),
             nn.Conv2d(channels, 12, 3, 1),
-            Dtow(2, True, version=0, device=device_id)
+            Dtow(2, True, device_id)
         )
 
     def forward(self, x):
@@ -300,33 +301,8 @@ class EntropyNet(nn.Module):
         return loss_vec*self.mask, self.mask
 
 
-class CMPNetV2M(nn.Module):
-    
-    def __init__(self, valid_dim=162, channels=192, code_channels=192, npart=16, quant_levels=8, opt=False, init=False, device_id=0):
-        super(CMPNetV2M, self).__init__()
-        self.slice = SphereSlice(npart,pad=0,opt=opt,device=device_id)
-        self.uslice = SphereUslice(npart,pad=0,opt=opt,device=device_id)
-        self.ctx = PseudoContextV2(npart,opt,device=device_id)
-        self.encoder = EncoderV2(channels,code_channels,npart,self.ctx,device_id)
-        self.decoder = DecoderV2(channels,code_channels,npart,self.ctx,device_id)
-        self.quant = PseudoQUANTV2(code_channels,quant_levels,npart, self.ctx, top_alpha=0.0001, device_id=device_id,ntop=1)#top_alpha mse:0.0001 ssim:0.01
-        self.vm = StubMask(valid_dim)
-        self.clip = ClipData()
-        self.mean_val = (quant_levels - 1) / 2.
-        self.dtw = Dtow(2, True, version=0, device=device_id)
-
-    def forward(self,x):
-        x = self.slice(x)
-        code = self.encoder(x)
-        code_f = self.quant(code)
-        vmask = self.vm(code_f)
-        code_f=code_f*vmask
-        tx = self.decoder(code_f)
-        tx = self.uslice(tx)
-        return self.clip(tx)
-
 class CMPNetV2MF(nn.Module):
-    
+
     def __init__(self, valid_dim=162, channels=192, code_channels=192, npart=16, quant_levels=8, opt=False, init=False, device_id=0):
         super(CMPNetV2MF, self).__init__()
         self.slice = SphereSlice(npart,pad=0,opt=opt,device=device_id)
@@ -335,13 +311,13 @@ class CMPNetV2MF(nn.Module):
         self.ctx_ent = PseudoEntropyContext(npart,1,opt,device=device_id)
         self.encoder = EncoderV2(channels,code_channels,npart,self.ctx,device_id)
         self.decoder = DecoderV2(channels,code_channels,npart,self.ctx,device_id)
-        self.quant = PseudoQUANTV2(code_channels,quant_levels,npart, self.ctx, check_iters=20000, top_alpha=0.0001, device_id=device_id,ntop=2)#top_alpha mse:0.0001 ssim:0.01
+        self.quant = PseudoQUANTV2(code_channels,quant_levels,npart, self.ctx, top_alpha=0.0001, device_id=device_id,ntop=2)#top_alpha mse:0.0001 ssim:0.01
         self.vm = StubMask(valid_dim)
         self.ext = Extract(valid_dim)
         self.clip = ClipData()
         self.ent = EntropyNet(valid_dim//4,npart,self.ctx_ent,3,3,device_id,drop_flag=init)
         self.mean_val = (quant_levels - 1) / 2.
-        self.dtw = Dtow(2, True, version=0, device=device_id)
+        self.dtw = Dtow(2, True, device_id)
 
     def forward(self,x):
         x = self.slice(x)
@@ -367,7 +343,7 @@ class CMPNetV2MFExtractor(nn.Module):
         self.quant = PseudoQUANTV2(code_channels,quant_levels,npart, self.ctx, top_alpha=0.0001, device_id=device_id,ntop=2)#top_alpha mse:0.0001 ssim:0.01
         self.ext = Extract(valid_dim)
         self.mean_val = (quant_levels - 1) / 2.
-        self.dtw = Dtow(2, True, version=0, device=device_id)
+        self.dtw = Dtow(2, True, device_id)
 
     def forward(self,x):
         x = self.slice(x)
@@ -424,127 +400,6 @@ class AccGrad():
         grad_list = [p.grad for p in list(param)]
         torch._foreach_add_(grad_list,self.acc_grad)
         self.zero()
-
-class EntropyConv2(nn.Module):
-    
-    def __init__(self, ngroups, cin, cout, hidden, npart, ctx:PseudoContextV2, device_id, act=True):
-        super(EntropyConv2,self).__init__()
-        self.pad = PseudoPadV2(1,npart,ctx,device=device_id)
-        self.conv = ChannelGroupConv(ngroups,cin,cout,3,hidden,device_id)
-        self.trim = PseudoFillV2(0,npart,ctx,device=device_id)
-        self.act = nn.PReLU(ngroups*cout) if act else None
-
-    def forward(self,x):
-        tx = self.pad(x)
-        tx = self.conv(tx)
-        if self.act is not None: tx = self.act(tx)
-        return self.trim(tx)
-
-
-class EntropyResidualBlockV2(nn.Module):
-    
-    def __init__(self, ngroups, cpn, npart, ctx:PseudoContextV2, device_id=0):
-        super(EntropyResidualBlockV2, self).__init__()
-        self.conv1 = EntropyConv2(ngroups,cpn,cpn,True,npart,ctx,device_id,True)
-        self.conv2 = EntropyConv2(ngroups,cpn,cpn,True,npart,ctx,device_id,True)
-    
-    def forward(self,x):
-        y = self.conv2(self.conv1(x))
-        return y+x
-
-class EntropySubNetV2(nn.Module):
-
-    def __init__(self, code_channels, ngroups, cpn, npart, num_gaussian, net_type, ctx:PseudoContextV2, device_id):
-        super(EntropySubNetV2,self).__init__()
-        cin = code_channels // ngroups
-        self.net = nn.Sequential(
-            EntropyConv2(ngroups,cin,cpn,False,npart,ctx,device_id),
-            EntropyResidualBlockV2(ngroups,cpn,npart,ctx,device_id),
-            EntropyResidualBlockV2(ngroups,cpn,npart,ctx,device_id),
-            EntropyResidualBlockV2(ngroups,cpn,npart,ctx,device_id),
-            EntropyResidualBlockV2(ngroups,cpn,npart,ctx,device_id),
-            EntropyResidualBlockV2(ngroups,cpn,npart,ctx,device_id),
-            EntropyConv2(ngroups,cpn,num_gaussian,True,npart,ctx,device_id,False)
-        ) 
-
-        self.reshape = ChannelGroupReshape(ngroups,code_channels,device_id)
-        self.act = None
-        if net_type == 0:#weight
-            self.act = nn.Softmax(dim=1)
-        elif net_type == 2:#delta
-            self.act = nn.ReLU() 
-            self.net._modules['6'].conv.bias.data.fill_(2)
-
-    def forward(self, x):
-        tx = self.net(x)
-        y = self.reshape(tx)
-        if self.act is not None:
-            y = self.act(y)
-        return y
-
-
-class EntropyNetV2(nn.Module):
-    
-    def __init__(self, code_channels, ngroups, npart, ctx:PseudoContextV2, cpn=3, num_gaussian=3, device_id=0, drop_flag = False):
-        super(EntropyNetV2,self).__init__()
-        self.drop = DropGrad(drop_flag)
-        self.weight_net = EntropySubNetV2(code_channels,ngroups,cpn,npart,num_gaussian,0,ctx,device_id)
-        self.mean_net = EntropySubNetV2(code_channels,ngroups,cpn,npart,num_gaussian,1,ctx,device_id)
-        self.delta_net = EntropySubNetV2(code_channels,ngroups,cpn,npart,num_gaussian,2,ctx,device_id)
-        self.mask = None
-        self.fill = PseudoFillV2(0,npart,ctx,device=device_id)
-        self.fill2 = PseudoFillV2(0,npart,ctx,device=device_id)
-        self.ent_loss = EntropyGmm(num_gaussian,device_id)
-
-    def setup_mask(self,x):
-        with torch.no_grad():
-            self.mask = torch.ones_like(x).detach()
-            self.mask = self.fill(self.mask)
-            self.mask = self.mask.view(-1)
-        return
-
-    def forward(self,x):
-        self.setup_mask(x)
-        x = self.fill2(x)
-        tx = self.drop(x)
-        weight = self.weight_net(tx)
-        mean = self.mean_net(tx)
-        delta = self.delta_net(tx) + 1e-6
-        label = tx.view(-1,1)
-        loss_vec = self.ent_loss(weight, delta, mean, label)
-        return loss_vec*self.mask, self.mask
-
-class CMPNetV3MF(nn.Module):
-
-    def __init__(self, valid_dim=162, channels=192, code_channels=192, npart=16, quant_levels=8, opt=False, init=False, device_id=0):
-        super(CMPNetV3MF, self).__init__()
-        self.slice = SphereSlice(npart,pad=0,opt=opt,device=device_id)
-        self.uslice = SphereUslice(npart,pad=0,opt=opt,device=device_id)
-        self.ctx = PseudoContextV2(npart,opt,device=device_id)
-        self.encoder = EncoderV2(channels,code_channels,npart,self.ctx,device_id)
-        self.decoder = DecoderV2(channels,code_channels,npart,self.ctx,device_id)
-        self.quant = PseudoQUANTV2(code_channels,quant_levels,npart, self.ctx, check_iters=20000, top_alpha=0.0001, device_id=device_id,ntop=2)#top_alpha mse:0.0001 ssim:0.01
-        self.vm = StubMask(valid_dim)
-        self.ext = Extract(valid_dim)
-        self.clip = ClipData()
-        #self.ent = EntropyNetV2(valid_dim,valid_dim//2,npart,self.ctx,3,3,device_id,drop_flag=init)
-        self.ent = EntropyNetV2(valid_dim//4,valid_dim//4,npart,self.ctx,8,3,device_id,drop_flag=init)
-        self.mean_val = (quant_levels - 1) / 2.
-        self.wtd = Dtow(2, True, version=0, device=device_id)
-
-    def forward(self,x):
-        x = self.slice(x)
-        code = self.encoder(x)
-        code_f, code_i = self.quant(code)
-        vmask = self.vm(code_f)
-        code_f=code_f*vmask
-        tx = self.decoder(code_f)
-        tx = self.uslice(tx)
-        code_i=self.ext(code_i)
-        hcode_i = self.wtd(code_i)
-        qy = hcode_i - self.mean_val
-        ent_vec, mask = self.ent(qy)
-        return self.clip(tx), ent_vec, mask
             
 def test():
     net = CMPNetV2MF(168,192,192,16,8,False,0).to('cuda:0')

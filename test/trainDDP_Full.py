@@ -109,7 +109,7 @@ def Job(rank, world_size, args):
     viewport_size = args.viewport_size
     pr1 = MultiProject(viewport_size, int(viewport_size*1.5), 0.5, False, args.gpu_id).to(device)
     pr2 = MultiProject(viewport_size, int(viewport_size*1.5), 0.5, False, args.gpu_id).to(device)
-    model = model_zoo_v2.CMPNetV3MF(args.valid_dim, args.channels,args.code_dim,args.npart,opt=args.opt,init=args.init,device_id=cid)
+    model = model_zoo_v2.CMPNetV2MF(args.valid_dim, args.channels,args.code_dim,args.npart,opt=args.opt,init=args.init,device_id=cid)
     saver = ModuleSaver('{}/save_models/'.format(base_dir),prex) if rank == 0 else None
 
     if args.init:
