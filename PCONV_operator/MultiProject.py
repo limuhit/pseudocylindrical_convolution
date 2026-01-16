@@ -20,7 +20,7 @@ class MULTI_PROJECT_AF(torch.autograd.Function):
         gid = grad_output.device.index
         outputs = ctx.op[gid].backward(grad_output)
         #/(outputs[1]+0.000001)
-        return outputs[0]/(outputs[1]+0.000001), None
+        return outputs[0], None
 
 class MultiProjectM(BaseOpModule):
     #int h_out, int w_out, float theta=.0, float phi = .0, float fov = 0.33333, bool timeit=false
