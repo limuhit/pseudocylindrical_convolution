@@ -18,8 +18,6 @@ class SphereSlice_AF(torch.autograd.Function):
     def backward(ctx, grad_output):
         if not grad_output.is_contiguous(): grad_output = grad_output.contiguous()
         gid = grad_output.device.index
-        grad_output = torch.abs(grad_output)
-        grad_output[grad_output>0] = 100
         outputs = ctx.op[gid].backward(grad_output)
         return outputs[0], None
     
